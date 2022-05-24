@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  task:number   = 2;
   imgSrc?:string ;
   peopleByCountry: any[] =
   [ { 'country': 'UK', 'people':    [ { "name": "Douglas Pace" }, { "name": "Mcleod Mueller" }, ] },

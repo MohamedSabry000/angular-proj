@@ -6,23 +6,34 @@
     <div class="col-md-4">
       <app-aside></app-aside>
     </div>
-    <div class="col-md-8">
-      <img width="100" src="{{ imgSrc }}" alt="">
-      <br />
+    <div *ngIf="task===1; then firstTask else secondTask"></div>
 
-      <ul>
-        <li *ngFor="let c of peopleByCountry" [ngSwitch]="c.country">
-          <div *ngSwitchCase="'UK'" class="text-danger">{{c.country}}</div>
-          <div *ngSwitchCase="'US'" class="text-success">{{c.country}}</div>
-          <div *ngSwitchCase="'MARS'" class="text-warning">{{c.country}}</div>
-          <div *ngSwitchDefault>{{c.country}}</div>
-          <ul>
-            <li *ngFor="let p of c.people">{{p.name}}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <ng-template #firstTask>
+      <div class="col-md-8">
+        <img width="100" src="{{ imgSrc }}" alt="">
+        <br />
+
+        <ul>
+          <li *ngFor="let c of peopleByCountry" [ngSwitch]="c.country">
+            <div *ngSwitchCase="'UK'" class="text-danger">{{c.country}}</div>
+            <div *ngSwitchCase="'US'" class="text-success">{{c.country}}</div>
+            <div *ngSwitchCase="'MARS'" class="text-warning">{{c.country}}</div>
+            <div *ngSwitchDefault>{{c.country}}</div>
+            <ul>
+              <li *ngFor="let p of c.people">{{p.name}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+    <ng-template #secondTask>
+      <div class="col-md-8">
+        <app-todo-list></app-todo-list>
+      </div>
+    </ng-template>
   </div>
+
+
 
 <div class="row">
   <div class="col-md-12">
