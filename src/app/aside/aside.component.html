@@ -11,30 +11,14 @@
         Home
       </a>
     </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-        Dashboard
+    <li *ngFor="let item of cartItems" class="nav-item">
+      <a href="#" class="nav-link">
+        <svg class="bi me-2" width="16" height="16"><use xlink:href="#settings"/></svg>
+        <span>{{ item.title | stringSlice:0:10 }}</span>
+        <span>{{ item.price | currency }}</span>
       </a>
     </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-        Orders
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-        Products
-      </a>
-    </li>
-    <li>
-      <a href="#" class="nav-link text-white">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-        Customers
-      </a>
-    </li>
+
   </ul>
   <hr>
   <div class="dropdown">

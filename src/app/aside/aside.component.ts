@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from '../product/iprod';
+import { CartService } from '../product/cart-service/cart.service';
 
 @Component({
   selector: 'app-aside',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsideComponent implements OnInit {
 
-  constructor() { }
+  cartItems?: IProduct[];
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.cartItems = this.cartService.getItems();
   }
 
 }

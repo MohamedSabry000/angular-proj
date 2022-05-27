@@ -1,15 +1,6 @@
-<!-- <p>home works!</p> -->
-<app-header-container></app-header-container>
 
 
-  <div class="row">
-    <div class="col-md-4">
-      <app-aside></app-aside>
-    </div>
-    <div *ngIf="task===1; then firstTask else secondTask"></div>
 
-    <ng-template #firstTask>
-      <div class="col-md-8">
         <img width="100" src="{{ imgSrc }}" alt="">
         <br />
 
@@ -24,19 +15,3 @@
             </ul>
           </li>
         </ul>
-      </div>
-    </ng-template>
-    <ng-template #secondTask>
-      <div class="col-md-8">
-        <app-todo-list></app-todo-list>
-      </div>
-    </ng-template>
-  </div>
-
-
-
-<div class="row">
-  <div class="col-md-12">
-    <app-footer></app-footer>
-  </div>
-</div>

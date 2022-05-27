@@ -10,6 +10,11 @@ import { HeaderContainerComponent } from './header-container/header-container.co
 import { AsideComponent } from './aside/aside.component';
 import { FooterComponent } from './footer/footer.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductCardComponent } from './product/product-card/product-card.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { StringSlicePipe } from './string-slice.pipe';
+import { FavouriteProductComponent } from './product/favourite-product/favourite-product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     HeaderContainerComponent,
     AsideComponent,
     FooterComponent,
-    TodoListComponent
+    TodoListComponent,
+    ProductListComponent,
+    ProductCardComponent,
+    ProductDetailsComponent,
+    StringSlicePipe,
+    FavouriteProductComponent
   ],
   imports: [
     BrowserModule,
