@@ -17,16 +17,11 @@ export class ProductCardComponent implements OnInit {
   @Input('singleProd') prodData?: IProduct;
   @Input() showDetails = false;
   @Input() added = false;
-  @Output() prodSelected: EventEmitter<IProduct> = new EventEmitter<IProduct>();
 
 
   constructor( private location: Location, private route: Router, private activeRoute: ActivatedRoute, private cartService: CartService ) { }
 
   ngOnInit(): void {
-  }
-
-  selectProd(e: any) {
-    this.prodSelected.emit(this.prodData);
   }
 
   addToCart(product: IProduct) {

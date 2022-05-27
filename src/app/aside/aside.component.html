@@ -11,12 +11,18 @@
         Home
       </a>
     </li>
-    <li *ngFor="let item of cartItems" class="nav-item">
-      <a href="#" class="nav-link">
-        <svg class="bi me-2" width="16" height="16"><use xlink:href="#settings"/></svg>
-        <span>{{ item.title | stringSlice:0:10 }}</span>
-        <span>{{ item.price | currency }}</span>
-      </a>
+    <li *ngFor="let item of cartItems; index as i" class="nav-item">
+      <div class="row">
+        <div class="col-md-4">
+          {{ item.title | stringSlice:0:10 }}
+        </div>
+        <div class="col-md-4">
+          <span>{{ item.price | currency }}</span>
+        </div>
+        <div class="col-md-4">
+          <button type="button" (click)="deleteFromCart(item!)">remove {{cartCounts![i]}} </button>
+        </div>
+      </div>
     </li>
 
   </ul>
