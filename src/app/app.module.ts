@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { AllPhotosComponent } from './all-photos/all-photos.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     FavouriteProductComponent,
     LoginComponent,
     AddProductComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AllPhotosComponent
   ],
   imports: [
     BrowserModule,

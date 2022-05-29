@@ -6,12 +6,16 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { LoginComponent } from './login/login.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
+import { AllPhotosComponent } from './all-photos/all-photos.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'todo-list', component: TodoListComponent },
   { path: 'product-list', component:ProductListComponent  },
   { path: 'prod-details/:id', component: ProductDetailsComponent },
   { path: 'user-details/:id', component: UserDetailsComponent },
+  { path: 'add-product', component: AddProductComponent },
+  { path: 'all-photos', component: AllPhotosComponent },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'product-list', pathMatch: 'full' }
