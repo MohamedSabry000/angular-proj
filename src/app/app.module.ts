@@ -15,6 +15,13 @@ import { ProductCardComponent } from './product/product-card/product-card.compon
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { StringSlicePipe } from './string-slice.pipe';
 import { FavouriteProductComponent } from './product/favourite-product/favourite-product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { LoginComponent } from './login/login.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +37,17 @@ import { FavouriteProductComponent } from './product/favourite-product/favourite
     ProductCardComponent,
     ProductDetailsComponent,
     StringSlicePipe,
-    FavouriteProductComponent
+    FavouriteProductComponent,
+    LoginComponent,
+    AddProductComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

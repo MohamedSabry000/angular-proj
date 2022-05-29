@@ -20,7 +20,7 @@
           <span>{{ item.price | currency }}</span>
         </div>
         <div class="col-md-4">
-          <button type="button" (click)="deleteFromCart(item!)">remove {{cartCounts![i]}} </button>
+          <button type="button" class="btn btn-warning" (click)="deleteFromCart(item!)">remove {{cartCounts![i]}} </button>
         </div>
       </div>
     </li>

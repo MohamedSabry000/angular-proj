@@ -9,7 +9,7 @@
       <p class="card-text" >
         {{prodData?.description! |stringSlice:0:30}}
       </p>
-      <button type="button" (click)="addToCart(prodData!)">Buy</button>
+      <button type="button" class="btn btn-success" (click)="addToCart(prodData!)">Add to Cart</button>
     </ng-template>
     <ng-template #long >
       <p class="card-text" #long >

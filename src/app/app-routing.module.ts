@@ -4,12 +4,15 @@ import { HomeComponent } from './home/home.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { LoginComponent } from './login/login.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'todo-list', component: TodoListComponent },
   { path: 'product-list', component:ProductListComponent  },
-  { path: 'product-details', component:ProductListComponent  },
   { path: 'prod-details/:id', component: ProductDetailsComponent },
+  { path: 'user-details/:id', component: UserDetailsComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'product-list', pathMatch: 'full' }
 ];
