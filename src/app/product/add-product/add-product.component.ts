@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
 
 import { IProduct } from './../iprod';
 import { ProdServiceService } from './../prod-service/prod-service.service';
@@ -12,7 +13,7 @@ import { ProdServiceService } from './../prod-service/prod-service.service';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor(private activeRoute: ActivatedRoute, private prodService: ProdServiceService) { }
+  constructor(private router: Router,private activeRoute: ActivatedRoute, private prodService: ProdServiceService) { }
 
   ngOnInit(): void {
   }
@@ -28,10 +29,16 @@ export class AddProductComponent implements OnInit {
 
   )
 
+  get title() { return this.myform.get('title') as FormControl; }
+  get description() { return this.myform.get('description') as FormControl; }
+  get url() { return this.myform.get('url') as FormControl; }
+  get price() { return this.myform.get('price') as FormControl; }
+
   onSubmit( prod: IProduct) {
     console.log(prod);
-
-    return this.prodService.post(prod);
+    this.prodService.post(prod);
+    this.router.navigateByUrl('/product-list/')
+    return
   }
 
 }
